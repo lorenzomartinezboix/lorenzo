@@ -1,0 +1,74 @@
+# controllers:
+#     resource:
+#         path: ../src/Controller/
+#         namespace: App\Controller
+#     type: attribute
+equipos_crear:
+    path: /equipos/crear
+    controller: App\Controller\EquipoController::crear
+    methods: POST
+equipos_modificar:
+    path: /equipos/modificar/{id}
+    controller: App\Controller\EquipoController::modificar
+    methods: PUT   
+equipos_baja:
+    path: /equipos/baja/{id}
+    controller: App\Controller\EquipoController::borrar
+    methods: PUT   
+equipos_ver:
+    path: /equipos/ver/{id}
+    controller: App\Controller\EquipoController::ver
+    methods: GET 
+equipos_listado:
+    path: /equipos/listado
+    controller: App\Controller\EquipoController::listado
+    methods: GET  
+jugador_registrar:
+    path: /jugador/registrar
+    controller: App\Controller\JugadorController::registrar
+    methods: POST    
+jugador_modificar:
+    path: /jugador/modificar/{id}
+    controller: App\Controller\JugadorController::modificar
+    methods: PUT 
+jugador_borrar:
+    path: /jugador/borrar/{id}
+    controller: App\Controller\JugadorController::borrar
+    methods: DELETE   
+jugador_ver:
+    path: /jugador/ver/{id}
+    controller: App\Controller\JugadorController::ver
+    methods: GET 
+jugador_goles:
+    path: /jugador/goles/{idliga}/{idjugador}
+    controller: App\Controller\JugadorController::verGoles
+    methods: GET     
+liga_crear:
+    path: /liga/crear
+    controller: App\Controller\LigaController::crear
+    methods: POST                                    
+liga_addequipo:
+    path: /liga/addequipo
+    controller: App\Controller\LigaController::addequipo
+    methods: POST  
+liga_ver:
+    path: /liga/participantes/{id}
+    controller: App\Controller\LigaController::ver
+    methods: GET     
+liga_clasificación:
+    path: /liga/resultado/{id}
+    controller: App\Controller\LigaController::resultado
+    methods: GET         
+partido_registrar:
+    path: /partido/crear
+    controller: App\Controller\PartidoController::crear
+    methods: POST       
+partido_gol:
+    path: /partido/resultado
+    controller: App\Controller\PartidoController::addresultado
+    methods: POST     
+partido_ver:
+    path: /partido/listado/{id}
+    controller: App\Controller\PartidoController::verListado
+    methods: GET           
+  
